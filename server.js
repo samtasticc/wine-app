@@ -11,5 +11,12 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 })
 // ========= MIDDLEWARE ========= //
+app.use(express.urlencoded({extend: false}))
+app.use(methodOverride('_method'))
+app.use(morgan('dev'))
 // ========= ROUTES ========= //
+
 // ========= SERVER ========= //
+app.listen(3000, () => {
+    console.log('Drinking wine from cork 3000')
+})
