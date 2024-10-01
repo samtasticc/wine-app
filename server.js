@@ -11,10 +11,15 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 })
 // ========= MIDDLEWARE ========= //
-app.use(express.urlencoded({extend: false}))
+// app.use(express.urlencoded({extend: false})) // add back in when it is time for your POST route
 app.use(methodOverride('_method'))
 app.use(morgan('dev'))
 // ========= ROUTES ========= //
+
+// === LANDING PAGE === //
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
 
 // ========= SERVER ========= //
 app.listen(3000, () => {
