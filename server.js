@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const app = express()
 const methodOverride = require('method-override')
 const morgan = require('morgan')
+const port = process.env.PORT ? process.env.PORT: '3000'
+const authController = require('./controllers/auth.js')
 // ========= MONGOOSE ========= //
 mongoose.connect(process.env.MONGODB_URI)
 mongoose.connection.on('connected', () => {
@@ -21,7 +23,9 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
+app.use('/auth', authController)
+
 // ========= SERVER ========= //
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Drinking wine from cork 3000')
 })
