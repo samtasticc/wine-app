@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/user.js')
+const bcrypt = require('bcrypt')
+const User = require('../models/wine.js')
 
 // ===== ROUTES ===== //
 router.get('sign-up', (req, res) => {
@@ -12,7 +13,17 @@ router.get('/sign-up', (req, res) => {
 })
 
 router.post('/sign-up', async (req, res) => {
-    res.send('form submission accepted')
+    const userTaken = await User.findOne({username: req.body.username})
+    if (userTaken) {
+        return res.send('Username already in use.')
+    }
+    if (req.body.password !== req.body.confirmPassword) {
+        return res.send('Both passwords do not match.')
+    }
+    const hashedPassword = bcrypt.hashSync(req.body.password, 15)
+    req.body.password = hashedPassword
+    const user = await User.create(req.body)
+    res.send(`Welcome, ${user.username}!`)
 })
 // EXPORT 
 module.exports = router

@@ -13,7 +13,7 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 })
 // ========= MIDDLEWARE ========= //
-// app.use(express.urlencoded({extend: false})) // add back in when it is time for your POST route
+app.use(express.urlencoded({extend: false})) // add back in when it is time for your POST route
 app.use(methodOverride('_method'))
 app.use(morgan('dev'))
 // ========= ROUTES ========= //
@@ -27,5 +27,5 @@ app.use('/auth', authController)
 
 // ========= SERVER ========= //
 app.listen(port, () => {
-    console.log('Drinking wine from cork 3000')
+    console.log('Drinking wine from bottle 3000')
 })
