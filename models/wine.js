@@ -25,6 +25,17 @@ const wineSchema = new mongoose.Schema({
     }
 })
 
+const userSchema = mongoose.Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    wines: [wineSchema]
+})
 const Wine = mongoose.model('Wine', wineSchema)
 
 module.exports = Wine
