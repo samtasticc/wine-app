@@ -33,7 +33,7 @@ router.post('/sign-up', async (req, res) => {
 router.post('/sign-in', async (req, res) => {
     const userFound = await User.findOne({username: req.body.username})
     if (!userFound) {
-        return res.end('Login failed. Please try again.')
+        return res.send('Login failed. Please try again.')
     }
     const validPassword = bcrypt.compareSync(
         req.body.password,
@@ -47,7 +47,7 @@ router.post('/sign-in', async (req, res) => {
         _id: userFound._id,
     }
     res.redirect('/')
-    res.send("You've signed in!")
+    // res.send("You've signed in!")
 })
 // EXPORT 
 module.exports = router
