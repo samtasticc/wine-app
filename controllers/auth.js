@@ -42,6 +42,11 @@ router.post('/sign-in', async (req, res) => {
     if (!validPassword) {
         return res.send('Login failed. Please try again.')
     }
+    req.session.user = {
+        username: userFound.username,
+        _id: userFound._id,
+    }
+    res.redirect('/')
     res.send("You've signed in!")
 })
 // EXPORT 

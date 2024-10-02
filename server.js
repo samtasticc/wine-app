@@ -7,6 +7,7 @@ const methodOverride = require('method-override')
 const morgan = require('morgan')
 const port = process.env.PORT ? process.env.PORT: '3000'
 const authController = require('./controllers/auth.js')
+const session = require('express-session')
 // ========= MONGOOSE ========= //
 mongoose.connect(process.env.MONGODB_URI)
 mongoose.connection.on('connected', () => {
@@ -16,6 +17,13 @@ mongoose.connection.on('connected', () => {
 app.use(express.urlencoded({extended: false})) // add back in when it is time for your POST route
 app.use(methodOverride('_method'))
 app.use(morgan('dev'))
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: true,
+    })
+)
 // ========= ROUTES ========= //
 
 // === LANDING PAGE === //
