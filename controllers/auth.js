@@ -29,5 +29,20 @@ router.post('/sign-up', async (req, res) => {
     const user = await User.create(req.body)
     res.send(`Welcome, ${user.username}!`)
 })
+
+router.post('/sign-in', async (req, res) => {
+    const userFound = await User.findOne({username: req.body.username})
+    if (!userFound) {
+        return res.end('Login failed. Please try again.')
+    }
+    const validPassword = bcrypt.compareSync(
+        req.body.password,
+        userFound.password
+    )
+    if (!validPassword) {
+        return res.send('Login failed. Please try again.')
+    }
+    res.send("You've signed in!")
+})
 // EXPORT 
 module.exports = router
