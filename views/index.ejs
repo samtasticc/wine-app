@@ -8,6 +8,9 @@
 <body>
     <% if (user) {%>
     <h1>Welcome to the Wine Landing Page, <%= user.username %>!</h1>
+    <p>
+        <a href="/auth/sign-out">Sign out</a>
+    </p>
     <% } else { %>
     <h1>Welcome to the Wine Landing Page, guest.</h1>
     <p>

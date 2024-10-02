@@ -16,6 +16,11 @@ router.get('/sign-in', (req, res) => {
     res.render('auth/sign-in.ejs')
 })
 
+router.get('/sign-out', (req, res) => {
+    req.session.destroy()
+    res.redirect('/')
+})
+
 router.post('/sign-up', async (req, res) => {
     const userTaken = await User.findOne({username: req.body.username})
     if (userTaken) {
