@@ -32,16 +32,17 @@ app.use(passUserToView)
 
 // === LANDING PAGE === //
 app.get('/', (req, res) => {
-    res.render('index.ejs', {
-        user: req.session.user,
-    })
-    
+    if (req.session.user) {
+        res.redirect(`/users/${req.session.user._id}/wines`)
+    } else {
+        res.render('index.ejs')    
+    }       
 })
 
 app.use('/auth', authController)
 app.use(isSignedIn)
 const winesController = require('./controllers/wines.js')
-app.use('/wine/:wineId/wines', winesController)
+app.use('/users/:userId/wines', winesController)
 
 // ========= SERVER ========= //
 app.listen(port, () => {
