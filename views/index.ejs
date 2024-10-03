@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine Landing Page!</title>
+    <title>Sip Happens🍷</title>
 </head>
 <body>
     <% if (user) {%>
-    <h1>Welcome to the Wine Landing Page, <%= user.username %>!</h1>
+    <h1>Welcome to Sip Happens, <%= user.username %>!</h1>
     <p>
         <a href="/auth/sign-out">Sign out</a>
     </p>
     <% } else { %>
-    <h1>Welcome to the Wine Landing Page, guest.</h1>
+    <h1>Welcome to Sip Happens, guest.</h1>
     <p>
         <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">Sign-in</a>
     </p>
