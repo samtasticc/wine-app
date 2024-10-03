@@ -5,16 +5,6 @@
 </head>
 <body>
     <%- include('partials/navbar.ejs') %>
-    <% if (user) {%>
-    <h1>Welcome to Sip Happens, <%= user.username %>!</h1>
-    <p>
-        <a href="/auth/sign-out">Sign out</a>
-    </p>
-    <% } else { %>
     <h1>Welcome to Sip Happens, guest.</h1>
-    <p>
-        <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">Sign-in</a>
-    </p>
-    <% } %>
 </body>
 </html>
