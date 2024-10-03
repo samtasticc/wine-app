@@ -40,6 +40,8 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authController)
 app.use(isSignedIn)
+const winesController = require('./controllers/wines.js')
+app.use('/wine/:wineId/wines', winesController)
 
 // ========= SERVER ========= //
 app.listen(port, () => {
