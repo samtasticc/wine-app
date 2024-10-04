@@ -13,4 +13,7 @@ router.get('/', (req, res) => {
     }
 })
 
+router.get('/new', async (req, res) => {
+    res.render('wines/new.ejs')
+})
 module.exports = router

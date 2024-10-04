@@ -5,6 +5,7 @@
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>
+    <a href="/users/<%=user._id%>/wines/new">Add a new wine.</a>
     <h1>Welcome to Sip Happens, <%= user.username %>!</h1>
     <h3>wines you've tried</h3>
 </body>
