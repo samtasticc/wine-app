@@ -11,7 +11,7 @@ const wineSchema = new mongoose.Schema({
     type: {
         type: String,
         enum: ['Make a selection', 'Red', 'White', 'Rosé', 'Sparkling'],
-        required: true
+        // required: true
     },
     varietal: { 
         type: String,
@@ -34,7 +34,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    wines: [wineSchema]
+    wines: [wineSchema],
 })
 const User = mongoose.model('User', userSchema)
 

@@ -4,14 +4,19 @@ const router = express.Router()
 const User = require('../models/wine.js')
 
 // ====== ROUTES ====== //
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        res.render('wines/index.ejs')
+        const currentUser = await User.findById(req.session.user._id)
+        res.render('wines/index.ejs', {
+            wines: currentUser.wines
+            // console.log(currentUser.wines)
+        })
     } catch(error) {
         console.log(error)
         res.redirect('/')
     }
 })
+
 
 router.get('/new', async (req, res) => {
     res.render('wines/new.ejs')
