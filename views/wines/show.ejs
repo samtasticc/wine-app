@@ -15,9 +15,10 @@
         <p>Varietal: <%= wines.varietal %></p>
         <p>ABV: <%= wines.abv %>%</p>
         <p>Review: <%= wines.review %></p>
-
-
-
-<!-- the rest of the code from the skyrockit lesson is allowing you to view the job posting. not sure if it is needed here since that isn't what we are doing but worth it to make a note.-->
+    <form
+        action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=DELETE"
+        method="POST">
+        <button type="submit">Yuck! Delete this wine!</button>
+    </form>
 </body>
 </html>
