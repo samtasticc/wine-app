@@ -8,7 +8,7 @@
 <body>
     <%- include('../partials/navbar.ejs') %>
     <h1>Add a new wine.</h1>
-    <form action="" method=""> <!-- DONT FORGET TO FILL THIS IN -->
+    <form action="/user/<%= user._id %>/wines" method="POST">
         <label for="country">Country:</label>
         <input type="text" name="company" id="company">
 
