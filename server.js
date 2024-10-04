@@ -6,6 +6,7 @@ const app = express()
 const methodOverride = require('method-override')
 const morgan = require('morgan')
 const port = process.env.PORT ? process.env.PORT: '3000'
+const path = require('path')
 const authController = require('./controllers/auth.js')
 const session = require('express-session')
 const isSignedIn = require('./middleware/is-signed-in.js')
@@ -18,7 +19,8 @@ mongoose.connection.on('connected', () => {
 // ========= MIDDLEWARE ========= //
 app.use(express.urlencoded({extended: false}))
 app.use(methodOverride('_method'))
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(
     session({
         secret: process.env.SESSION_SECRET,
