@@ -11,7 +11,7 @@
     <ul>
         <% wines.forEach((wines)=>{ %>
             <a href="/users/<%= user._id %>/wines/<%= wines._id %>">
-            <li><%= wines.brand %> - </li>
+            <li><%= wines.brand %> - <%= wines.varietal %></li>
         <% }) %>    
             </a>
     </ul>

@@ -11,27 +11,34 @@
     <form action="/users/<%= user._id %>/wines" method="POST">
         <label for="country">Country:</label>
         <input type="text" name="company" id="company">
-
+        <br>
+        <br>
         <label for="brand">Brand:</label>
         <input type="text" name="brand" id="brand">
-
-        <label for="type">Type:</label>
+        <br>
+        <br>
+        <label for="status">Type:</label>
         <select id="status" name="status">
             <option value="selection">Make a selection</option>
             <option value="red">Red</option>
             <option value="rose">Rosé</option>
             <option value="sparkling">Sparkling</option>
             <option value="white">White</option>
-
+        </select>
+        <br>
+        <br>
         <label for="varietal">Varietal:</label>
         <input type="text" name="varietal" id="varietal">
-
+        <br>
+        <br>
         <label for="abv">ABV%</label>
         <input type="number" name="abv" id="abv" min="0" value="0" step=".01">
-
+        <br>
+        <br>
         <label for="notes">Review:</label>
         <textarea name="notes" id="notes"></textarea>
-
+        <br>
+        <br>
         <button type="submit">Submit your wine</button>
     </form>
 </body>
