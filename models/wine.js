@@ -1,26 +1,26 @@
 const mongoose = require('mongoose')
 
 const wineSchema = new mongoose.Schema({
-    country: {
+    country: { // text input
         type: String,
     },
-    brand: {
-        type: String,
-        required: true
-    },
-    type: {
-        type: String,
-        enum: ['Red', 'White'],
-        required: true
-    },
-    subType: {
+    brand: { // text input
         type: String,
         required: true
     },
-    abv: {
+    type: { // use a <select> dropdown
+        type: String,
+        enum: ['Red', 'White', 'Rosé', 'Sparkling'],
+        required: true
+    },
+    subType: { // text input
+        type: String,
+        required: true
+    },
+    abv: { // number input, but if doesn't work, switch to text
         type: Number,
     },
-    review: {
+    review: { // use <textarea>
         type: String,
     }
 })

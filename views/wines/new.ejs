@@ -8,5 +8,30 @@
 <body>
     <%- include('../partials/navbar.ejs') %>
     <h1>Add a new wine.</h1>
+    <form action="" method=""> <!-- DONT FORGET TO FILL THIS IN -->
+        <label for="country">Country:</label>
+        <input type="text" name="company" id="company">
+
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" id="brand">
+
+        <label for="type">Type:</label>
+        <select id="status" name="status">
+            <option value="red">Red</option>
+            <option value="rose">Rosé</option>
+            <option value="sparkling">Sparkling</option>
+            <option value="white">White</option>
+
+        <label for="subtype">Sub Type:</label>
+        <input type="text" name="subtype" id="subtype">
+
+        <label for="abv">ABV%</label>
+        <input type="number" name="abv" id="abv">
+
+        <label for="notes">Review:</label>
+        <textarea name="notes" id="notes"></textarea>
+
+        <button type="submit">Submit your wine</button>
+    </form>
 </body>
 </html>
