@@ -24,9 +24,9 @@ router.get('/new', async (req, res) => {
 router.get('/:winesId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id)
-        const wines = currentUser.wines.id(req.params.applicationId)
+        const wines = currentUser.wines.id(req.params.winesId)
         res.render('wines/show.ejs', {
-            wines: wines
+            wines: wines // currently matches the skyrockit, may have to add the 's' back in, same for line 27.
         })
     } catch(error) {
         console.log(error)

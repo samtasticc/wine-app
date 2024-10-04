@@ -10,15 +10,15 @@
     <h1>Add a new wine.</h1>
     <form action="/users/<%= user._id %>/wines" method="POST">
         <label for="country">Country:</label>
-        <input type="text" name="company" id="company">
+        <input type="text" name="country" id="country">
         <br>
         <br>
         <label for="brand">Brand:</label>
         <input type="text" name="brand" id="brand">
         <br>
         <br>
-        <label for="status">Type:</label>
-        <select id="status" name="status">
+        <label for="type">Type:</label>
+        <select id="type" name="type">
             <option value="selection">Make a selection</option>
             <option value="red">Red</option>
             <option value="rose">Rosé</option>
@@ -35,8 +35,8 @@
         <input type="number" name="abv" id="abv" min="0" value="0" step=".01">
         <br>
         <br>
-        <label for="notes">Review:</label>
-        <textarea name="notes" id="notes"></textarea>
+        <label for="review">Review:</label>
+        <textarea name="review" id="review"></textarea>
         <br>
         <br>
         <button type="submit">Submit your wine</button>
