@@ -8,7 +8,7 @@
 <body>
     <%- include('../partials/navbar.ejs') %>
     <h1>Add a new wine.</h1>
-    <form action="/user/<%= user._id %>/wines" method="POST">
+    <form action="/users/<%= user._id %>/wines" method="POST">
         <label for="country">Country:</label>
         <input type="text" name="company" id="company">
 
@@ -17,16 +17,17 @@
 
         <label for="type">Type:</label>
         <select id="status" name="status">
+            <option value="selection">Make a selection</option>
             <option value="red">Red</option>
             <option value="rose">Rosé</option>
             <option value="sparkling">Sparkling</option>
             <option value="white">White</option>
 
-        <label for="subtype">Sub Type:</label>
-        <input type="text" name="subtype" id="subtype">
+        <label for="varietal">Varietal:</label>
+        <input type="text" name="varietal" id="varietal">
 
         <label for="abv">ABV%</label>
-        <input type="number" name="abv" id="abv">
+        <input type="number" name="abv" id="abv" min="0" value="0" step=".01">
 
         <label for="notes">Review:</label>
         <textarea name="notes" id="notes"></textarea>
