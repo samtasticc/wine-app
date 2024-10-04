@@ -15,6 +15,7 @@
         <p>Varietal: <%= wines.varietal %></p>
         <p>ABV: <%= wines.abv %>%</p>
         <p>Review: <%= wines.review %></p>
+    <a href="/users/<%= user._id %>/wines/<%= wines._id %>/edit">Sip, Smile, Repeat. Edit this wine.</a>
     <form
         action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=DELETE"
         method="POST">

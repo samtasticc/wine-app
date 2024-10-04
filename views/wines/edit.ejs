@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing <%= wines.brand %> - <%= wines.type %></title>
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <h1>Editing <%= wines.brand %> - <%= wines.type %></h1>
+    <form action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=PUT" method="POST">
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country" value="<%= wines.country %>">
+        <br>
+        <br>
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" id="brand" value="<%= wines.brand %>">
+        <br>
+        <br>
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="selection" <%= wines.type === 'selection' ? 'selected' : '' %>>Make a selection</option>
+            <option value="red" <%= wines.type === 'red' ? 'selected' : '' %>>Red</option>
+            <option value="rose" <%= wines.type === 'rose' ? 'selected' : '' %>>Rosé</option>
+            <option value="sparkling" <%= wines.type === 'sparkling' ? 'selected' : '' %>>Sparkling</option>
+            <option value="white" <%= wines.type === 'white' ? 'selected' : '' %>>White</option>
+        </select>
+        <br>
+        <br>
+        <label for="varietal">Varietal:</label>
+        <input type="text" name="varietal" id="varietal" value="<%= wines.varietal %>">
+        <br>
+        <br>
+        <label for="abv">ABV%</label>
+        <input type="number" name="abv" id="abv" min="0" value="0" step=".01" value="<%= wines.abv %>">
+        <br>
+        <br>
+        <label for="review">Review:</label>
+        <textarea name="review" id="review" value="<%= wines.review %>"></textarea> <!-- MAKE SURE THIS ONE WORKS-->
+        <br>
+        <br>
+        <button type="submit">Update your wine</button>
+    </form>
+</body>
+</html>

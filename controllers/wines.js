@@ -34,6 +34,19 @@ router.get('/:winesId', async (req, res) => {
     }
 })
 
+router.get('/:winesId/edit', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id)
+        const wines = currentUser.wines.id(req.params.winesId)
+        res.render('wines/edit.ejs', {
+            wines: wines 
+        })
+    } catch (error) {
+        console.log(error)
+        res.redirect('/')
+    }
+})
+
 router.post('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id)
