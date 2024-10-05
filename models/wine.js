@@ -10,7 +10,7 @@ const wineSchema = new mongoose.Schema({
     },
     type: {
         type: String,
-        enum: ['Make a selection', 'Red', 'White', 'Rosé', 'Sparkling'],
+        enum: ['None', 'Red', 'White', 'Rose', 'Sparkling'],
     },
     varietal: { 
         type: String,
