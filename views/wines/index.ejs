@@ -2,20 +2,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css"/>
-    <title>wines you've tried</title>
+    <title>My Sips</title>
 </head>
 <body>
     <div class="flex-container">
         <div>
             <h1>Welcome to Sip Happens, <%= user.username %>!</h1>
         </div>
-        <div>
+        <div class="navbar">
             <%- include('../partials/navbar.ejs') %> 
         </div>
         <div>
-            <h3>Wine Log:</h3>
+            <h3>My Sips:</h3>
         </div>
-        <div>
+        <div class="mysips">
             <ul>
                 <% wines.forEach((wines)=>{ %>
                     <a href="/users/<%= user._id %>/wines/<%= wines._id %>">

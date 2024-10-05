@@ -1,79 +1,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester:wght@300;400;600&family=Roboto+Condensed&display=swap');
 
-body {
-    background-color: #800020;
-    color: #D4AF37; 
-    font-family: 'Rochester';
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Rochester, Roboto Condensed;
+    background-color: #cccaca; 
+    color: #333; 
+}
+
+h1 {
+    text-align: center;
+    color: #6d001b; 
+    margin: 20px 0;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+    color: #6d001b;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.navbar {
+    background-color: #6d001b; 
+    padding: 7px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.navbar a {
+    color: #FFD700; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 .flex-container {
     display: flex;
     flex-direction: column;
-}
-
-h1 {
-    font-family: 'Rochester'; 
-    text-align: center;
-}
-
-h2 { /* partials/nav */
-    font-family: 'Rochester';
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Rochester';
-    text-align: center;
-}
-
-/* ==== is this code needed?====
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-} */
-
-button, a {
-    background-color: #D4AF37; 
-    color: #800020; 
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-button:hover, a:hover {
-    background-color: #c19a3b; 
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2); 
-    border-radius: 5px;
 }
 
 p {
-    font-family: 'Roboto Condensed';
+    margin: 10px 0; /* Spacing between paragraphs */
+    color: #333; /* Dark gray for contrast */
+    font-size: 18px; /* Increase font size for readability */
+    font-family: Roboto Condensed;
+}
+
+button {
+    background-color: #6d001b; /* Burgundy button */
+    color: #FFD700; /* Gold text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Space above the button */
+    text-align: center; /* Center text inside button */
+}
+
+button a {
+    color: #FFD700; /* Gold text for link */
+    text-decoration: none; /* No underline for link */
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #CD7F32; /* Gold on hover */
+    color: #6d001b; /* Burgundy text */
 }
 
 form {
-    text-align: center;   
+    background-color: #fff; 
+    border: 1px solid #6d001b; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    font-size: 18px;
+    font-family: Roboto Condensed;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #6d001b; 
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 10px; /* Space above the form */
+}
+
+.mysips {
+    width: 100%; 
+    max-width: 600px;
+    background-color: #fff; 
+    border: 1px solid #6d001b;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+}
+
+.mysips ul {
+    list-style: none;
+    padding: 0;
+    font-family: Roboto Condensed;
+}
+
+.mysips li {
+    margin: 10px 0; 
+    color: #6d001b; 
+    transition: color 0.3s; 
+}
+
+.mysips li:hover {
+    color: #CD7F32; 
+}
+
+.mysips a {
+    text-decoration: none; 
+}
+
+textarea {
+    height: 100px;
+    resize: none; 
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        padding: 10px; 
+    }
 }

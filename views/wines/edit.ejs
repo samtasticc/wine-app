@@ -11,8 +11,8 @@
         <div>
             <h1>Editing <%= wines.brand %> - <%= wines.type %></h1>
         </div>
-        <div>
-            <h2><%- include('../partials/navbar.ejs') %></h2>
+        <div class="navbar">
+            <%- include('../partials/navbar.ejs') %>
         </div>
         <div>
             <form action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=PUT" method="POST">
@@ -45,7 +45,7 @@
                 <label for="review">Review:</label>
                 <textarea name="review" id="review" value=""><%= wines.review %></textarea>
                 <br>
-                <button type="submit">Update your wine</button>
+                <button type="submit">Update Your Sip</button>
             </form>
         </div>
     </div>

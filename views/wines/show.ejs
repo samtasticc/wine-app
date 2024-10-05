@@ -11,8 +11,8 @@
         <div>
             <h1><%= wines.brand %> - <%= wines.varietal %></h1>
         </div>
-        <div>
-            <h2><%- include('../partials/navbar.ejs') %></h2>
+        <div class="navbar">
+            <%- include('../partials/navbar.ejs') %>
         </div>
         <div>
             <p>Country: <%= wines.country %></p>
@@ -24,14 +24,14 @@
         </div>
         <div>
             <button>
-                <a href="/users/<%= user._id %>/wines/<%= wines._id %>/edit">Sip, Smile, Repeat. Edit this wine.</a>
+                <a href="/users/<%= user._id %>/wines/<%= wines._id %>/edit">Edit this Sip</a>
             </button>
         </div>
         <div>
             <form
                 action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=DELETE"
                 method="POST">
-                <button type="submit">Yuck! Delete this wine!</button>
+                <button type="submit">Yuck! Delete this Sip!</button>
             </form>
         </div>
     </div>

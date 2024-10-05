@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css"/>
-    <title>Add a new wine.</title>
+    <title>Add a New Sip</title>
 </head>
 <body>
     <div class="flex-container">
         <div>
-            <h1>Add a new wine.</h1>
+            <h1>What are you sipping on?</h1>
         </div>
-        <div>
-            <h2><%- include('../partials/navbar.ejs') %></h2>
+        <div class="navbar">
+            <%- include('../partials/navbar.ejs') %>
         </div>
         <div>
             <form action="/users/<%= user._id %>/wines" method="POST">
@@ -46,7 +46,7 @@
                 <textarea name="review" id="review"></textarea>
                 <br>
                 <br>
-                <button type="submit">Submit your wine</button>
+                <button type="submit">Add Your Sip</button>
             </form>
         </div>
     </div>
