@@ -150,9 +150,3 @@ textarea {
     height: 100px;
     resize: none; 
 }
-
-@media (max-width: 600px) {
-    .flex-container {
-        padding: 10px; 
-    }
-}
