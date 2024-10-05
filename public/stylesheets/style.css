@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rochester:wght@300;400;600&family=Roboto+Condensed&display=swap');
+
+body {
+    background-color: #800020;
+    color: #D4AF37; 
+    font-family: 'Rochester';
+    margin: 0;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Rochester'; 
+    text-align: center;
+}
+
+h2 { /* partials/nav */
+    font-family: 'Rochester';
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Rochester';
+    text-align: center;
+}
+
+/* ==== is this code needed?====
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+} */
+
+button, a {
+    background-color: #D4AF37; 
+    color: #800020; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover, a:hover {
+    background-color: #c19a3b; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 5px;
+}
+
+p {
+    font-family: 'Roboto Condensed';
+}
+
+form {
+    text-align: center;   
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

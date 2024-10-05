@@ -5,16 +5,25 @@
     <title>wines you've tried</title>
 </head>
 <body>
-    <%- include('../partials/navbar.ejs') %>
-    <a href="/users/<%=user._id%>/wines/new">Add a new wine.</a>
-    <h1>Welcome to Sip Happens, <%= user.username %>!</h1>
-    <h3>wines you've tried</h3>
-    <ul>
-        <% wines.forEach((wines)=>{ %>
-            <a href="/users/<%= user._id %>/wines/<%= wines._id %>">
-            <li><%= wines.brand %> - <%= wines.varietal %></li>
-        <% }) %>    
-            </a>
-    </ul>
+    <div class="flex-container">
+        <div>
+            <h1>Welcome to Sip Happens, <%= user.username %>!</h1>
+        </div>
+        <div>
+            <%- include('../partials/navbar.ejs') %> 
+        </div>
+        <div>
+            <h3>Wine Log:</h3>
+        </div>
+        <div>
+            <ul>
+                <% wines.forEach((wines)=>{ %>
+                    <a href="/users/<%= user._id %>/wines/<%= wines._id %>">
+                    <li><%= wines.brand %> - <%= wines.varietal %></li>
+                <% }) %>    
+                    </a>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

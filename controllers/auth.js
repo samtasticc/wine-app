@@ -48,7 +48,6 @@ router.post('/sign-in', async (req, res) => {
         _id: userFound._id,
     }
     res.redirect('/')
-    // res.send("You've signed in!")
 })
 // EXPORT 
 module.exports = router

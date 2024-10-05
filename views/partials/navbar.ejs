@@ -1,6 +1,8 @@
-<nav>
+<nav class="navbar">
+    
     <% if(user) { %>
         <a href="/users/<%= user._id %>/wines">Your wines</a>
+        <a href="/users/<%=user._id%>/wines/new">Add a new wine.</a>
         <a href="/auth/sign-out">Sign Out</a>
     <% } else { %>
         <a href="/auth/sign-in">Sign In</a>

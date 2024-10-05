@@ -7,40 +7,47 @@
     <title>Editing <%= wines.brand %> - <%= wines.type %></title>
 </head>
 <body>
-    <h1>Editing <%= wines.brand %> - <%= wines.type %></h1>
-    <h2><%- include('../partials/navbar.ejs') %></h2>
-    <form action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=PUT" method="POST">
-        <label for="country">Country:</label>
-        <input type="text" name="country" id="country" value="<%= wines.country %>">
-        <br>
-        <br>
-        <label for="brand">Brand:</label>
-        <input type="text" name="brand" id="brand" value="<%= wines.brand %>">
-        <br>
-        <br>
-        <label for="type">Type:</label>
-        <select id="type" name="type">
-            <option value="None" <%= wines.type === 'None' ? 'selected' : '' %>>Make a selection</option>
-            <option value="Red" <%= wines.type === 'Red' ? 'selected' : '' %>>Red</option>
-            <option value="Rose" <%= wines.type === 'Rose' ? 'selected' : '' %>>Rosé</option>
-            <option value="Sparkling" <%= wines.type === 'Sparkling' ? 'selected' : '' %>>Sparkling</option>
-            <option value="White" <%= wines.type === 'White' ? 'selected' : '' %>>White</option>
-        </select>
-        <br>
-        <br>
-        <label for="varietal">Varietal:</label>
-        <input type="text" name="varietal" id="varietal" value="<%= wines.varietal %>">
-        <br>
-        <br>
-        <label for="abv">ABV%</label>
-        <input type="number" name="abv" id="abv" min="0" value="<%= wines.abv %>" step=".01" >
-        <br>
-        <br>
-        <label for="review">Review:</label>
-        <textarea name="review" id="review" value="<%= wines.review %>"></textarea> <!-- MAKE SURE THIS ONE WORKS-->
-        <br>
-        <br>
-        <button type="submit">Update your wine</button>
-    </form>
+    <div class="flex-container">
+        <div>
+            <h1>Editing <%= wines.brand %> - <%= wines.type %></h1>
+        </div>
+        <div>
+            <h2><%- include('../partials/navbar.ejs') %></h2>
+        </div>
+        <div>
+            <form action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=PUT" method="POST">
+                <label for="country">Country:</label>
+                <input type="text" name="country" id="country" value="<%= wines.country %>">
+                <br>
+                <br>
+                <label for="brand">Brand:</label>
+                <input type="text" name="brand" id="brand" value="<%= wines.brand %>">
+                <br>
+                <br>
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option value="None" <%= wines.type === 'None' ? 'selected' : '' %>>Make a selection</option>
+                    <option value="Red" <%= wines.type === 'Red' ? 'selected' : '' %>>Red</option>
+                    <option value="Rose" <%= wines.type === 'Rose' ? 'selected' : '' %>>Rosé</option>
+                    <option value="Sparkling" <%= wines.type === 'Sparkling' ? 'selected' : '' %>>Sparkling</option>
+                    <option value="White" <%= wines.type === 'White' ? 'selected' : '' %>>White</option>
+                </select>
+                <br>
+                <br>
+                <label for="varietal">Varietal:</label>
+                <input type="text" name="varietal" id="varietal" value="<%= wines.varietal %>">
+                <br>
+                <br>
+                <label for="abv">ABV%</label>
+                <input type="number" name="abv" id="abv" min="0" value="<%= wines.abv %>" step=".01" >
+                <br>
+                <br>
+                <label for="review">Review:</label>
+                <textarea name="review" id="review" value=""><%= wines.review %></textarea>
+                <br>
+                <button type="submit">Update your wine</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
