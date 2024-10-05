@@ -7,8 +7,8 @@
     <title>Editing <%= wines.brand %> - <%= wines.type %></title>
 </head>
 <body>
-    <%- include('../partials/navbar.ejs') %>
     <h1>Editing <%= wines.brand %> - <%= wines.type %></h1>
+    <h2><%- include('../partials/navbar.ejs') %></h2>
     <form action="/users/<%= user._id %>/wines/<%= wines._id %>?_method=PUT" method="POST">
         <label for="country">Country:</label>
         <input type="text" name="country" id="country" value="<%= wines.country %>">
@@ -20,11 +20,11 @@
         <br>
         <label for="type">Type:</label>
         <select id="type" name="type">
-            <option value="selection" <%= wines.type === 'selection' ? 'selected' : '' %>>Make a selection</option>
-            <option value="red" <%= wines.type === 'red' ? 'selected' : '' %>>Red</option>
-            <option value="rose" <%= wines.type === 'rose' ? 'selected' : '' %>>Rosé</option>
-            <option value="sparkling" <%= wines.type === 'sparkling' ? 'selected' : '' %>>Sparkling</option>
-            <option value="white" <%= wines.type === 'white' ? 'selected' : '' %>>White</option>
+            <option value="None" <%= wines.type === 'None' ? 'selected' : '' %>>Make a selection</option>
+            <option value="Red" <%= wines.type === 'Red' ? 'selected' : '' %>>Red</option>
+            <option value="Rose" <%= wines.type === 'Rose' ? 'selected' : '' %>>Rosé</option>
+            <option value="Sparkling" <%= wines.type === 'Sparkling' ? 'selected' : '' %>>Sparkling</option>
+            <option value="White" <%= wines.type === 'White' ? 'selected' : '' %>>White</option>
         </select>
         <br>
         <br>
