@@ -7,8 +7,8 @@
     <title>Add a new wine.</title>
 </head>
 <body>
-    <%- include('../partials/navbar.ejs') %>
     <h1>Add a new wine.</h1>
+    <h2><%- include('../partials/navbar.ejs') %></h2>
     <form action="/users/<%= user._id %>/wines" method="POST">
         <label for="country">Country:</label>
         <input type="text" name="country" id="country">
@@ -20,11 +20,11 @@
         <br>
         <label for="type">Type:</label>
         <select id="type" name="type">
-            <option value="selection">Make a selection</option>
-            <option value="red">Red</option>
-            <option value="rose">Rosé</option>
-            <option value="sparkling">Sparkling</option>
-            <option value="white">White</option>
+            <option value="None">Make a selection</option>
+            <option value="Red">Red</option>
+            <option value="Rose">Rosé</option>
+            <option value="Sparkling">Sparkling</option>
+            <option value="White">White</option>
         </select>
         <br>
         <br>
