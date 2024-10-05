@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
             wines: currentUser.wines
         })
     } catch(error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -26,7 +25,6 @@ router.get('/:winesId', async (req, res) => {
             wines: wines
         })
     } catch(error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -39,7 +37,6 @@ router.get('/:winesId/edit', async (req, res) => {
             wines: wines 
         })
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -51,7 +48,6 @@ router.post('/', async (req, res) => {
         await currentUser.save()
         res.redirect(`/users/${currentUser._id}/wines`)
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -64,7 +60,6 @@ router.put('/:winesId', async (req, res) => {
         await currentUser.save()
         res.redirect(`/users/${currentUser._id}/wines/${req.params.winesId}`)
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -76,7 +71,6 @@ router.delete('/:winesId', async (req, res) => {
         await currentUser.save()
         res.redirect(`/users/${currentUser._id}/wines`)
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })

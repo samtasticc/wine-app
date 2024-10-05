@@ -13,7 +13,6 @@ const passUserToView = require('./middleware/pass-user-to-view.js')
 
 mongoose.connect(process.env.MONGODB_URI)
 mongoose.connection.on('connected', () => {
-    console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 })
 
 app.use(express.urlencoded({extended: false}))
@@ -44,5 +43,4 @@ const winesController = require('./controllers/wines.js')
 app.use('/users/:userId/wines', winesController)
 
 app.listen(port, () => {
-    console.log('Drinking wine from bottle 3000')
 })
