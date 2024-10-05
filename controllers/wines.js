@@ -1,9 +1,7 @@
 const express = require('express')
 const router = express.Router()
-
 const User = require('../models/wine.js')
 
-// ====== ROUTES ====== //
 router.get('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id)

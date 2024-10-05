@@ -3,7 +3,6 @@ const router = express.Router()
 const bcrypt = require('bcrypt')
 const User = require('../models/wine.js')
 
-// ===== ROUTES ===== //
 router.get('/sign-up', (req, res) => {
     res.render('auth/sign-up.ejs')
 })
@@ -49,5 +48,5 @@ router.post('/sign-in', async (req, res) => {
     }
     res.redirect('/')
 })
-// EXPORT 
+
 module.exports = router

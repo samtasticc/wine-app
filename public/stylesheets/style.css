@@ -53,33 +53,32 @@ h3 {
 }
 
 p {
-    margin: 10px 0; /* Spacing between paragraphs */
-    color: #333; /* Dark gray for contrast */
-    font-size: 18px; /* Increase font size for readability */
+    margin: 10px 0;
+    color: #333; 
+    font-size: 18px;
     font-family: Roboto Condensed;
 }
 
 button {
-    background-color: #6d001b; /* Burgundy button */
-    color: #FFD700; /* Gold text */
+    background-color: #6d001b;
+    color: #FFD700; 
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px; /* Space above the button */
-    text-align: center; /* Center text inside button */
+    margin-top: 10px; 
+    text-align: center; 
 }
 
 button a {
-    color: #FFD700; /* Gold text for link */
-    text-decoration: none; /* No underline for link */
+    color: #FFD700; 
+    text-decoration: none;
 }
 
-/* Button Hover Effects */
 button:hover {
-    background-color: #CD7F32; /* Gold on hover */
-    color: #6d001b; /* Burgundy text */
+    background-color: #CD7F32; 
+    color: #6d001b; 
 }
 
 form {
@@ -114,7 +113,7 @@ textarea {
 }
 
 form {
-    margin-top: 10px; /* Space above the form */
+    margin-top: 10px;
 }
 
 .mysips {
