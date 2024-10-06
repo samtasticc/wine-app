@@ -18,7 +18,7 @@
 * AAU, I want to note the country, brand name, wine type, wine sub-type, and ABV%.
 * AAU, I want to be able to add my personal opinions on the wine I've added to my list.
 
-#### Stretch User Stories
+#### Next Steps
 * AAU, I want to have a seperate page for wines I want to try but haven't yet.
 * AAU, I want to mark wines as favorites and view these on their own page.
 * AAU, I want to note the wine name and wine year.
@@ -39,3 +39,20 @@
 * CSS
 * JavaScript
 * EJS
+
+#### Attributions
+* [bcryptjs](https://www.npmjs.com/package/bcryptjs)
+* [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [dotenv](https://www.npmjs.com/package/dotenv)
+* [EJS](https://ejs.co/)
+* [Express](https://expressjs.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [Heroku](heroku.com)
+* [Macy's Wine Shop - What Are Wine Varietals?](https://macyswineshop.com/blogs/wine-101/what-are-wine-varietals)
+* [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Mongoose](https://mongoosejs.com/)
+* [nodemon](https://www.npmjs.com/package/nodemon)
+* [StackOverflow - Node.js project naming conventions for files & folders](https://stackoverflow.com/questions/18927298/node-js-project-naming-conventions-for-files-folders)
+* [W3 Schools - CSS](https://www.w3schools.com/cssref/)
+* [W3 Schools - Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+* [Wine Folly - Wine Types](https://winefolly.com/deep-dive/common-types-of-wine/)
